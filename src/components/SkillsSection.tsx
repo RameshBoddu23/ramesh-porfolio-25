@@ -1,74 +1,62 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Laptop, FileCode, Monitor } from "lucide-react";
+
+const stackImages = [
+  {
+    src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+    alt: "Laptop & monitor showing JavaScript code",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&q=80",
+    alt: "Gray laptop computer",
+  },
+];
 
 const skills = [
-  {
-    category: "Front-End",
-    icon: <Monitor className="h-6 w-6 text-blue-500" />,
-    items: ["React.js", "JavaScript", "HTML5", "CSS3", "TailwindCSS"],
-  },
-  {
-    category: "Tools & Platforms",
-    icon: <Laptop className="h-6 w-6 text-blue-500" />,
-    items: ["Git", "VS Code", "Figma", "WordPress", "Responsive Design"],
-  },
-  {
-    category: "Additional Skills",
-    icon: <FileCode className="h-6 w-6 text-blue-500" />,
-    items: ["UiPath (RPA)", "AS400", "DB2400"],
-  },
-  {
-    category: "Soft Skills",
-    icon: <Code className="h-6 w-6 text-blue-500" />,
-    items: [
-      "Problem Solving",
-      "Communication",
-      "Time Management",
-      "Adaptability",
-      "Teamwork",
-    ],
-  },
+  "React.js",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "TailwindCSS",
+  "UiPath (RPA)",
+  "AS400",
+  "DB2400",
+  "WordPress",
 ];
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            My Skills
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+            Skills
           </h2>
           <div className="mt-2 h-1 w-20 bg-primary mx-auto rounded-full"></div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((skillGroup, index) => (
-            <Card
-              key={index}
-              className="shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {skillGroup.icon}
-                  <h3 className="text-lg font-semibold ml-2">
-                    {skillGroup.category}
-                  </h3>
-                </div>
-                <ul className="space-y-2">
-                  {skillGroup.items.map((skill, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center py-2 px-3 bg-white rounded-md shadow-sm"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>
-                      <span className="text-gray-700">{skill}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="flex flex-col md:flex-row gap-8 md:items-center md:justify-between">
+          <div className="grid grid-cols-2 gap-6 md:w-1/2">
+            {skills.map((skill) => (
+              <Card
+                key={skill}
+                className="p-4 text-center shadow-sm rounded-lg bg-white dark:bg-card"
+              >
+                <CardContent className="font-medium text-gray-700 dark:text-gray-200">
+                  {skill}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="flex flex-col gap-4 items-center md:w-1/2">
+            {stackImages.map((img) => (
+              <img
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                className="rounded-xl shadow w-full max-w-xs object-cover border border-gray-100 dark:border-gray-700"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
