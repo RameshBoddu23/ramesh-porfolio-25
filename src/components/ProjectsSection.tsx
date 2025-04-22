@@ -52,14 +52,17 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section 
+      id="projects" 
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 dark:bg-gradient-to-br dark:from-blue-900/30 dark:via-blue-950/40 dark:to-blue-900/50"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
             My Projects
           </h2>
           <div className="mt-2 h-1 w-20 bg-primary mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and
             experience in front-end development.
           </p>
@@ -69,7 +72,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white/80 dark:bg-gray-900/60 backdrop-blur-sm"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -79,20 +82,31 @@ const ProjectsSection = () => {
                 />
               </div>
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardTitle className="dark:text-white">{project.title}</CardTitle>
+                <CardDescription className="dark:text-gray-300">
+                  {project.description}
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.tags.map((tag, i) => (
-                    <Badge key={i} variant="secondary">
+                    <Badge 
+                      key={i} 
+                      variant="secondary" 
+                      className="dark:bg-gray-700 dark:text-gray-200"
+                    >
                       {tag}
                     </Badge>
                   ))}
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button variant="outline" size="sm" asChild>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="dark:border-gray-700 dark:text-gray-200" 
+                  asChild
+                >
                   <a
                     href={project.github}
                     target="_blank"
@@ -103,7 +117,11 @@ const ProjectsSection = () => {
                     Code
                   </a>
                 </Button>
-                <Button size="sm" asChild>
+                <Button 
+                  size="sm" 
+                  className="dark:bg-blue-800 dark:hover:bg-blue-700" 
+                  asChild
+                >
                   <a
                     href={project.demo}
                     target="_blank"
