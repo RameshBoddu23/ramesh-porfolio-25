@@ -78,7 +78,7 @@ const ProjectsSection = () => {
   return (
     <section 
       id="projects" 
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 dark:bg-gradient-to-br dark:from-blue-900/30 dark:via-blue-950/40 dark:to-blue-900/50"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-100/60 via-gray-50/80 to-blue-50/60 dark:bg-gradient-to-br dark:from-slate-800/50 dark:via-gray-800/40 dark:to-slate-700/50"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div 

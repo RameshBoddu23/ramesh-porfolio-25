@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
@@ -50,7 +49,7 @@ const cardVariants = {
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50/50 dark:bg-slate-800/30">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           className="text-center mb-16"

@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
@@ -26,7 +25,7 @@ const itemVariants = {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 dark:bg-slate-900/40">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           className="text-center mb-16"

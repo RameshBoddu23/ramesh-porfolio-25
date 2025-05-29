@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -6,7 +5,7 @@ import { motion } from "framer-motion";
 
 const ResumeSection = () => {
   return (
-    <section id="resume" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background">
+    <section id="resume" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50/60 dark:bg-slate-800/40">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

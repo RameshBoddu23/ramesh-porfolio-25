@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -9,7 +8,7 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8"
     >
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50 to-white dark:from-blue-900/30 dark:to-background"></div>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-50/80 to-white/60 dark:from-slate-900/50 dark:to-slate-800/30"></div>
       <motion.div 
         className="max-w-3xl mx-auto text-center"
         initial={{ opacity: 0, y: 50 }}
