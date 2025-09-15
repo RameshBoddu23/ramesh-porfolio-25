@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 const AnimatedBackground = () => {
   return (
-    <div className="fixed inset-0 -z-50 overflow-hidden">
+    <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
       {/* Animated gradient overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-cyan-50/30 dark:from-blue-900/10 dark:via-purple-900/5 dark:to-cyan-900/10"
+        className="absolute inset-0 bg-gradient-to-br from-blue-100/40 via-purple-100/30 to-cyan-100/40 dark:from-blue-900/20 dark:via-purple-900/15 dark:to-cyan-900/20"
         animate={{
           background: [
             "linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.05) 50%, rgba(6, 182, 212, 0.1) 100%)",
@@ -22,10 +22,10 @@ const AnimatedBackground = () => {
       />
 
       {/* Floating geometric shapes */}
-      {[...Array(6)].map((_, i) => (
+      {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-gradient-to-r from-blue-400/10 to-purple-400/10 dark:from-blue-400/5 dark:to-purple-400/5"
+          className="absolute rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-400/15 dark:to-purple-400/15 backdrop-blur-sm"
           style={{
             width: Math.random() * 300 + 100,
             height: Math.random() * 300 + 100,
