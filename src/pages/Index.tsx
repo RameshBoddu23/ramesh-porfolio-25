@@ -11,7 +11,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 relative">
+    <div className="min-h-screen relative" style={{ background: '#f8fafc' }}>
       <AnimatedBackground />
       <Navbar />
       <HeroSection />
