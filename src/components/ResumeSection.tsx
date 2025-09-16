@@ -29,43 +29,52 @@ const ResumeSection = () => {
         >
           <Card className="mt-8 shadow transition-shadow hover:shadow-lg bg-white dark:bg-card">
             <CardContent className="p-8 flex flex-col md:flex-row items-center md:gap-8">
-              <motion.img
-                src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=350&q=80"
-                alt="Resume Banner"
-                className="rounded-md mb-4 md:mb-0 md:mr-6 w-32 h-40 object-cover shadow"
-                whileHover={{ scale: 1.05, rotateY: 5 }}
-                transition={{ duration: 0.3 }}
-              />
-              <div className="flex-1 text-start">
-                <motion.h3 
-                  className="text-xl font-semibold text-gray-900 dark:text-white mb-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
+                <motion.div
+                  className="rounded-lg bg-gradient-to-br from-blue-50 to-slate-100 dark:from-blue-900/20 dark:to-slate-800/50 p-6 mb-4 md:mb-0 md:mr-6 w-48 h-40 flex items-center justify-center shadow-lg border border-blue-200/30 dark:border-blue-700/30"
+                  whileHover={{ scale: 1.05, rotateY: 5 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  Ramesh – Front-End Developer
-                </motion.h3>
-                <motion.ul 
-                  className="mb-4 text-gray-600 dark:text-gray-300"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <li>
-                    <span className="font-medium">Tech Stack:</span> React.js, JavaScript, HTML, CSS, TailwindCSS
-                  </li>
-                  <li>
-                    <span className="font-medium">Additional Skills:</span> UiPath (RPA), AS400, DB2400, WordPress
-                  </li>
-                  <li>
-                    <span className="font-medium">Experience:</span> Building responsive, accessible, and performant web applications.
-                  </li>
-                  <li>
-                    <span className="font-medium">Location:</span> Available for Remote Work
-                  </li>
-                </motion.ul>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">RB</div>
+                    <div className="text-xs text-blue-500 dark:text-blue-300">Frontend Developer</div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">3+ Years Exp</div>
+                  </div>
+                </motion.div>
+                <div className="flex-1 text-start">
+                  <motion.h3 
+                    className="text-xl font-semibold text-gray-900 dark:text-white mb-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                  >
+                    Ramesh Boddu – Frontend Developer
+                  </motion.h3>
+                  <motion.div 
+                    className="mb-4 text-gray-600 dark:text-gray-300 space-y-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex flex-wrap gap-4 text-sm">
+                      <span className="text-blue-600 dark:text-blue-400">📧 rameshboddu.dev@gmail.com</span>
+                      <span className="text-blue-600 dark:text-blue-400">📱 +91-9866324172</span>
+                      <span className="text-blue-600 dark:text-blue-400">📍 Hyderabad, India</span>
+                    </div>
+                    <div className="mt-3">
+                      <div className="font-medium text-gray-800 dark:text-gray-200 mb-1">Technical Skills:</div>
+                      <div className="text-sm leading-relaxed">React.js, JavaScript (ES6+), Redux, Material-UI, Tailwind CSS, HTML5, CSS3, REST APIs, Jest, Git</div>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-800 dark:text-gray-200 mb-1">Current Role:</div>
+                      <div className="text-sm">Software Engineer at Kanerika Software Pvt Ltd (July 2022 – Present)</div>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-800 dark:text-gray-200 mb-1">Education:</div>
+                      <div className="text-sm">B.Tech Mechanical Engineering, NMRCE Hyderabad (CGPA 7.2)</div>
+                    </div>
+                  </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +86,7 @@ const ResumeSection = () => {
                   <Button asChild size="lg">
                     <a
                       href="/resume.pdf"
-                      download
+                      download="RameshBoddu_Frontend_Developer_Resume.pdf"
                       className="flex items-center"
                     >
                       Download Resume
